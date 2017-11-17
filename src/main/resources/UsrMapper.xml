@@ -1,0 +1,19 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.UsrDao">
+
+    <select id="selectAll"  resultType="Usr">
+    select * from usr
+</select>
+    <select id="selectbyUsrname" parameterType="Usr" resultType="Usr">
+        SELECT * FROM  usr WHERE Usrname=#{Usrname}
+    </select>
+    <select id="selectbyUsrnameandPassword" parameterType="Usr" resultType="Usr">
+        SELECT * from usr WHERE Usrname=#{Usrname} and Password=#{Password}
+    </select>
+    <insert id="setUsr" parameterType="Usr" useGeneratedKeys="true" keyProperty="Id">
+        INSERT INTO usr(Usrname,Password) VALUES ('${Usrname}','${Password}')
+    </insert>
+    <delete id="delUsr" parameterType="int">
+        DELETE from usr where Id=${Id}
+    </delete>
+</mapper>

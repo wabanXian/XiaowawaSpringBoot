@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+
+<body>
+<div>
+
+    <!--              -->
+    <div class="cd-user-modal">
+        <div class="cd-user-modal-container">
+            <ul class="cd-switcher">
+                <li><a href="/login">登录</a></li>
+                <li><a href="/Register">注册</a></li>
+            </ul>
+
+            <!-- 登录表单 -->
+            <div id="cd-login">
+                <form class="cd-form" method="post"  th:object="${Usr}">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="Usrname"></label>
+                        <input class="full-width has-padding has-border" id="Usrname" name="Usrname" size="30" type="text" th:placeholder="在这里输入用户名"  onfocus="ccl()" autocomplete="off">
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="Password"></label>
+                        <input class="full-width has-padding has-border" id="Password" name="Password" size="30" type="password"  th:placeholder="在这里输入密码" onfocus="ccl()">
+                    </p>
+                    <p class="fieldset">
+                        <span th:text="${msg}" style="color: red;font-size: 10px" id="cl"></span>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width2" type="submit" value="登 录" onclick="checklogin()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="application/javascript" src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+<script type="application/javascript" src="/js/Vaild.js"></script>
+<script type="application/javascript"  src="js/common.js"></script>
+<script type="application/javascript"  src="js/character.js"></script>
+<script type="application/javascript"  src="js/lib.js"></script>
+</html>

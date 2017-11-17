@@ -1,0 +1,28 @@
+spring:
+  thymeleaf:
+    mode:  HTML5
+    encoding: utf-8
+    content-type: text/html
+    cache: false
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 1
+    url: jdbc:postgresql://localhost:5432/Usrs?serverTimezone=UTC
+
+  application:
+    name: xiaowawa
+
+server:
+  port: 667
+mybatis:
+  mapper-locations: classpath:/*Mapper.xml
+  type-aliases-package: domain
+
+############################################
+
+wawa:
+  errorcode: "用户名或密码错误"
+          #http://localhost:668/eureka/
+
