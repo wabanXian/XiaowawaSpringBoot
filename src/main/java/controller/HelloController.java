@@ -20,6 +20,6 @@ Xiaowawawebconfig xiaowawawebconfig;
    @RequestMapping("/new")
     public ModelAndView Hello(ModelAndView mv){
         mv.setViewName("new");
-       return mv;
-   }
+            return mv;
+}
 }

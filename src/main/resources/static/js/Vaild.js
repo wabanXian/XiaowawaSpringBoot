@@ -101,10 +101,11 @@ function checkregister() {
             success: function (data) {
                 if (data) {
                     alert("注册成功");
-                    location.href = "/login"
+                   location.href="/login";
                 }
                 else {
                     alert("该用户已存在");
+                    ccl();
                 }
             },
             error: function (e) {
@@ -113,6 +114,7 @@ function checkregister() {
             }
         });
     }
+
 }
 
 function checklogin() {
@@ -131,7 +133,8 @@ function checklogin() {
         success: function (data) {
             if (data) {
                 alert("登录成功");
-                location.href = "/"
+                location.href = "/new";
+
             }
             else {
                 alert("用户名或密码错误");
@@ -143,6 +146,8 @@ function checklogin() {
     })
 }
 }
+
+
 function ccl() {
     document.getElementById("cl").innerHTML = "";
 }

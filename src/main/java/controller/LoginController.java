@@ -41,7 +41,7 @@ public class LoginController {
         return "Login";
     }
 
-    @RequestMapping(value = "/Login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
     public Boolean login(@RequestBody Usr usr, HttpSession httpSession) throws InterruptedException {
          Boolean result = false;

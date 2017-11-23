@@ -22,7 +22,5 @@ mybatis:
 
 ############################################
 
-wawa:
-  errorcode: "用户名或密码错误"
           #http://localhost:668/eureka/
 
