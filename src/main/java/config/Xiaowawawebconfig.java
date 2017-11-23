@@ -17,7 +17,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "wawa")
 
 public class Xiaowawawebconfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
